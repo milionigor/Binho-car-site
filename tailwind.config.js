@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "verde-italia": "#2ecc71",
-        "vermelho-italia": "#e74c3c",
+        // Cores oficiais da Itália (ajustadas para brilhar no site)
+        "verde-italia": "#009246",
+        "vermelho-italia": "#ce2b37",
         dark: "#1a1a1a",
       },
       fontFamily: {

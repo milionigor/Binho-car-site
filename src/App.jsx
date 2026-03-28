@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Depoimentos from "./components/Depoimentos"; // Passo 2: Importando os depoimentos
+import Mapa from "./components/Mapa";
 import {
   FaWhatsapp,
   FaGasPump,
@@ -155,7 +156,7 @@ function App() {
 
       {/* ⭐ SEÇÃO 3: DEPOIMENTOS DE CLIENTES */}
       <Depoimentos />
-
+      <Mapa />
       <Footer />
 
       <a
