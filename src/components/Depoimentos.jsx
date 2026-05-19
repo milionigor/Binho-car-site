@@ -2,6 +2,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { FaCheckCircle } from "react-icons/fa";
 
+// 📸 IMPORTANDO AS FOTOS REAIS DOS ATIVOS (ASSETS)
+import cliente1 from "../assets/cliente1.png";
+import cliente2 from "../assets/cliente2.png";
+import cliente3 from "../assets/cliente3.png";
+import cliente4 from "../assets/cliente4.png";
+import cliente5 from "../assets/cliente5.png";
+import cliente6 from "../assets/cliente6.png";
+import cliente7 from "../assets/cliente7.png";
+import cliente8 from "../assets/cliente8.png";
+
 // Importando os estilos do Swiper
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,51 +19,51 @@ import "swiper/css/pagination";
 const clientes = [
   {
     id: 1,
-    nome: "Marcos Silva",
+    nome: "Nivaldo",
     cidade: "Vinhedo",
-    foto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    foto: cliente1,
   },
   {
     id: 2,
-    nome: "Ana Paula",
-    cidade: "Louveira",
-    foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
+    nome: "Isaías",
+    cidade: "Vinhedo",
+    foto: cliente2,
   },
   {
     id: 3,
-    nome: "Ricardo Gomes",
-    cidade: "Valinhos",
-    foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+    nome: "Diego",
+    cidade: "Vinhedo",
+    foto: cliente3,
   },
   {
     id: 4,
-    nome: "Carla Souza",
+    nome: "Ricardo",
     cidade: "Vinhedo",
-    foto: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+    foto: cliente4,
   },
   {
     id: 5,
-    nome: "Lucas Lima",
-    cidade: "Campinas",
-    foto: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+    nome: "Danilo",
+    cidade: "Vinhedo",
+    foto: cliente5,
   },
   {
     id: 6,
-    nome: "Fernanda M.",
-    cidade: "Jundiaí",
-    foto: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80",
+    nome: "Márcio",
+    cidade: "Vinhedo",
+    foto: cliente6,
   },
   {
     id: 7,
-    nome: "João Pedro",
+    nome: "Sem Nome",
     cidade: "Vinhedo",
-    foto: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
+    foto: cliente7,
   },
   {
     id: 8,
-    nome: "Bia Arantes",
-    cidade: "Itatiba",
-    foto: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=800&q=80",
+    nome: "Sem Nome",
+    cidade: "Vinhedo",
+    foto: cliente8,
   },
 ];
 
@@ -91,7 +101,7 @@ export default function Depoimentos() {
           {clientes.map((cliente) => (
             <SwiperSlide key={cliente.id}>
               <div className="group relative h-[450px] rounded-[40px] overflow-hidden shadow-xl border-4 border-gray-50 transition-all duration-500">
-                {/* 📸 A FOTO */}
+                {/* 📸 A FOTO REAL */}
                 <img
                   src={cliente.foto}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -128,8 +138,9 @@ export default function Depoimentos() {
               </p>
             </div>
             <a
-              href="https://wa.me/5519999999999"
+              href="https://wa.me/5519992644705?text=Olá%20Binho%20Car%20Veículos!%20Gostaria%20de%20marcar%20uma%20visita%20para%20tomar%20um%20café%20e%20conhecer%20os%20carros!"
               target="_blank"
+              rel="noreferrer"
               className="bg-white text-dark px-10 py-5 rounded-2xl font-black text-lg hover:bg-vermelho-italia hover:text-white transition-all uppercase shadow-lg"
             >
               Marcar Minha Visita

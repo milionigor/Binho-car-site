@@ -1,9 +1,13 @@
 import { FaMapMarkerAlt, FaRoute, FaClock } from "react-icons/fa";
 
 export default function Mapa() {
-  // Link oficial do Google Maps para a Binho Car em Vinhedo
+  // Link oficial direto que exibe a Binho Car Veículos no Iframe
   const mapaUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.316008630386!2d-46.98678722378828!3d-23.009782441014134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfcd3629a8e32d%3A0x168f01cb09f43359!2sBinho%20Car!5e0!3m2!1spt-BR!2sbr!4v1710520000000!5m2!1spt-BR!2sbr";
+    "https://maps.google.com/maps?q=Binho+Car+Veiculos+Avenida+Presidente+Castelo+Branco+2000+Vinhedo&t=&z=16&ie=UTF8&iwloc=&output=embed";
+
+  // Link universal e seguro que abre o app/navegador do cliente direto na rota da loja
+  const rotaUrl =
+    "https://www.google.com/maps/dir/?api=1&destination=Binho+Car+Veiculos+Avenida+Presidente+Castelo+Branco+2000+Vinhedo+SP";
 
   return (
     <section id="localizacao" className="py-24 bg-gray-50">
@@ -11,9 +15,9 @@ export default function Mapa() {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Lado Esquerdo: Informações de Contato */}
           <div className="lg:w-1/3 text-left">
+            {/* ☕ Título Corrigido */}
             <h2 className="text-4xl font-black text-dark mb-6 uppercase italic tracking-tighter">
-              Venha tomar um café com o{" "}
-              <span className="text-vermelho-italia">Binho</span>!
+              Venha tomar um café conosco!
             </h2>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -48,8 +52,9 @@ export default function Mapa() {
                 </div>
               </div>
 
+              {/* 🚗 Link de rota universal (Evita o erro Dynamic Link Not Found) */}
               <a
-                href="https://maps.app.goo.gl/LeOoKTbNyJQRWTP0CcsBjxY"
+                href={rotaUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-verde-italia text-white px-8 py-4 rounded-xl font-black uppercase hover:scale-105 transition-transform shadow-lg"

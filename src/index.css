@@ -8,3 +8,14 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8fafc;
 }
+:root {
+  --swiper-navigation-color: #e31d1a; /* Vermelho Italia */
+  --swiper-pagination-color: #009246; /* Verde Italia */
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 50%;
+  transform: scale(0.6);
+}

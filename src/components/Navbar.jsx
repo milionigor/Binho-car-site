@@ -1,33 +1,60 @@
 import { useState } from "react";
 import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
-// 1. IMPORTAR O LOGO REAL AQUI
-import logoBinhoCar from "../assets/logo-binhocar.png"; // Verifique se o nome do arquivo está correto
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import logoBinhoCar from "../assets/logo-binhocar.png";
 
 export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const fecharMenu = () => setMenuAberto(false);
 
+  // 🚀 FUNÇÃO MÁGICA ATUALIZADA: Resolve o problema de navegação entre páginas
+  const handleNavegacao = (idSeção, e) => {
+    e.preventDefault();
+    fecharMenu();
+
+    if (location.pathname !== "/") {
+      // Se NÃO estiver na Home (ex: está em Detalhes), primeiro volta pra Home
+      navigate("/");
+      // Espera um milésimo para a página carregar e rola até a seção
+      setTimeout(() => {
+        const elemento = document.getElementById(idSeção);
+        if (elemento) {
+          elemento.scrollIntoView({ behavior: "smooth" });
+        } else if (idSeção === "topo") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Se já ESTIVER na Home, apenas faz o scroll suave normal
+      const elemento = document.getElementById(idSeção);
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: "smooth" });
+      } else if (idSeção === "topo") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   const linksMenu = [
-    { nome: "Home", url: "/" },
-    { nome: "Estoque", url: "/#estoque" },
-    { nome: "Sobre Nós", url: "/#sobre" },
+    { nome: "Home", id: "topo" },
+    { nome: "Estoque", id: "estoque" },
+    { nome: "Família Binho Car", id: "depoimentos" },
+    { nome: "Sobre Nós", id: "sobre" },
   ];
 
   return (
-    // 2. MUDAMOS O FUNDO PARA PRETO (bg-dark) E O TEXTO PARA BRANCO (text-white)
     <nav className="bg-dark/95 backdrop-blur-sm shadow-2xl fixed w-full z-50 font-poppins border-b-2 border-vermelho-italia">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between h-24 items-center">
-          {/* 🚗 LOGO REAL DA LOJA (Clicável) */}
+          {/* Logo com navegação inteligente */}
           <Link
             to="/"
             className="flex items-center gap-2 group"
-            onClick={fecharMenu}
+            onClick={(e) => handleNavegacao("topo", e)}
           >
-            {/* Tag img com altura ajustada (h-16 = 64px) */}
             <img
               src={logoBinhoCar}
               alt="Logo Binho Car Vinhedo"
@@ -40,16 +67,16 @@ export default function Navbar() {
             {linksMenu.map((link) => (
               <a
                 key={link.nome}
-                href={link.url}
-                // Texto agora é branco puro com hover no vermelho
-                className="text-white font-bold hover:text-vermelho-italia transition-colors uppercase text-sm tracking-widest"
+                href={`#${link.id}`}
+                onClick={(e) => handleNavegacao(link.id, e)}
+                className="text-white font-bold hover:text-vermelho-italia transition-colors uppercase text-sm tracking-widest cursor-pointer"
               >
                 {link.nome}
               </a>
             ))}
 
             <a
-              href="https://wa.me/5519999999999"
+              href="https://wa.me/5519992644705?text=Olá%20Binho%20Car%20Veículos!%20Vim%20pelo%20site%20da%20loja%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20veículos%20disponíveis.%20Poderia%20me%20passar%20mais%20detalhes,%20por%20gentileza"
               target="_blank"
               rel="noreferrer"
               className="bg-verde-italia text-white px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-green-600 transition-all shadow-lg font-black uppercase text-sm tracking-wider"
@@ -62,7 +89,6 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMenuAberto(!menuAberto)}
-              // Botão agora é claro contra o fundo preto
               className="text-white p-2 rounded-lg bg-gray-800 focus:outline-none transition-colors"
             >
               {menuAberto ? (
@@ -75,17 +101,18 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu Lateral Mobile (Fundo também fica preto) */}
+      {/* Menu Lateral Mobile */}
       <div
-        className={`fixed top-24 left-0 w-full h-screen bg-dark md:hidden transition-transform duration-300 ease-in-out z-40 p-8 ${menuAberto ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-24 left-0 w-full h-screen bg-dark md:hidden transition-transform duration-300 ease-in-out z-40 p-8 ${
+          menuAberto ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="flex flex-col gap-8 text-center pt-10">
           {linksMenu.map((link) => (
             <a
               key={link.nome}
-              href={link.url}
-              onClick={fecharMenu}
-              // Texto branco no mobile
+              href={`#${link.id}`}
+              onClick={(e) => handleNavegacao(link.id, e)}
               className="text-white font-black text-2xl hover:text-vermelho-italia transition-colors uppercase italic tracking-tighter py-3 border-b-2 border-gray-800"
             >
               {link.nome}
@@ -93,10 +120,10 @@ export default function Navbar() {
           ))}
 
           <a
-            href="https://wa.me/5519999999999"
+            href="https://wa.me/5519992644705?text=Olá%20Binho%20Car%20Veículos!%20Vim%20pelo%20site%20da%20loja%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20veículos%20disponíveis.%20Poderia%20me%20passar%20mais%20detalhes,%20por%20gentileza"
             target="_blank"
             onClick={fecharMenu}
-            className="w-full mt-6 bg-verde-italia text-white px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-green-600 transition-all shadow-xl font-black uppercase text-lg"
+            className="w-full mt-6 bg-verde-italia text-white px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-green-600 transition-all shadow-lg font-black uppercase text-lg"
           >
             <FaWhatsapp size={22} /> Falar com o Binho
           </a>

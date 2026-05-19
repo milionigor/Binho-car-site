@@ -1,243 +1,289 @@
+// ==========================================
+// 1. IMPORTS
+// ==========================================
+
+// Jetta
+import jettaFoto1 from "./assets/Jetta Tsi/fotoJetta1.png";
+import jettaFoto2 from "./assets/Jetta Tsi/fotoJetta2.png";
+import jettaFoto3 from "./assets/Jetta Tsi/fotoJetta3.png";
+import jettaFoto4 from "./assets/Jetta Tsi/fotoJetta4.png";
+import jettaFoto5 from "./assets/Jetta Tsi/fotoJetta5.png";
+import videoJettaMp4 from "./assets/Jetta Tsi/Jettavideo.mp4";
+
+// Jeep Renegade
+import jeepFoto1 from "./assets/JEEP RENEGADE AZUL/fotojeeprenegade1.png";
+import jeepFoto2 from "./assets/JEEP RENEGADE AZUL/fotojeeprenegade2.png";
+import jeepFoto3 from "./assets/JEEP RENEGADE AZUL/fotojeeprenegade3.png";
+import jeepFoto4 from "./assets/JEEP RENEGADE AZUL/fotojeeprenegade4.png";
+import jeepFoto5 from "./assets/JEEP RENEGADE AZUL/fotojeeprenegade5.png";
+
+// Mercedes
+import mercedesFoto1 from "./assets/mercedes/fotomercedes1.png";
+import mercedesFoto2 from "./assets/mercedes/fotomercedes2.png";
+import mercedesFoto3 from "./assets/mercedes/fotomercedes3.png";
+import mercedesFoto4 from "./assets/mercedes/fotomercedes4.png";
+import mercedesFoto5 from "./assets/mercedes/fotomercedes5.png";
+import videoMercedesMp4 from "./assets/mercedes/videoMercedes.mp4";
+
+// ==========================================
+// NOVOS CARROS (Nomes corrigidos conforme os prints das pastas)
+// ==========================================
+
+// Corolla
+import corollaFoto1 from "./assets/Corolla/fotocorolla1.png";
+import corollaFoto2 from "./assets/Corolla/fotocorolla2.png";
+import corollaFoto3 from "./assets/Corolla/fotocorolla3.png";
+import corollaFoto4 from "./assets/Corolla/fotocorolla4.png";
+import corollaFoto5 from "./assets/Corolla/fotocorolla5.png";
+
+// Onix Laranja
+import onixLaranjaFoto1 from "./assets/Onix laranja/fotoonixlaranja1.png";
+import onixLaranjaFoto2 from "./assets/Onix laranja/fotoonixlaranja2.png";
+import onixLaranjaFoto3 from "./assets/Onix laranja/fotoonixlaranja3.png";
+import onixLaranjaFoto4 from "./assets/Onix laranja/fotoonixlaranja4.png";
+import onixLaranjaFoto5 from "./assets/Onix laranja/fotoonixlaranja5.png";
+
+// Onix Branco
+import onixBrancoFoto1 from "./assets/Onix branco/fotoonixbranco1.png";
+import onixBrancoFoto2 from "./assets/Onix branco/fotoonixbranco2.png";
+import onixBrancoFoto3 from "./assets/Onix branco/fotoonixbranco3.png";
+import onixBrancoFoto4 from "./assets/Onix branco/fotoonixbranco4.png";
+import onixBrancoFoto5 from "./assets/Onix branco/fotoonixbranco5.png";
+
+// Saveiro
+import saveiroFoto1 from "./assets/SAVEIRO/fotosaveiro1.png";
+import saveiroFoto2 from "./assets/SAVEIRO/fotosaveiro2.png";
+import saveiroFoto3 from "./assets/SAVEIRO/fotosaveiro3.png";
+import saveiroFoto4 from "./assets/SAVEIRO/fotosaveiro4.png";
+import saveiroFoto5 from "./assets/SAVEIRO/fotosaveiro5.png";
+
+// HB20 Branco
+import hb20BrancoFoto1 from "./assets/Hb20 branco/fotohb20branco1.png";
+import hb20BrancoFoto2 from "./assets/Hb20 branco/fotohb20branco2.png";
+import hb20BrancoFoto3 from "./assets/Hb20 branco/fotohb20branco3.png";
+import hb20BrancoFoto4 from "./assets/Hb20 branco/fotohb20branco4.png";
+import hb20BrancoFoto5 from "./assets/Hb20 branco/fotohb20branco5.png";
+
+// Aircross
+import aircrossFoto1 from "./assets/Aircross/fotoaircross1.png";
+import aircrossFoto2 from "./assets/Aircross/fotoaircross2.png";
+import aircrossFoto3 from "./assets/Aircross/fotoaircross3.png";
+import aircrossFoto4 from "./assets/Aircross/fotoaircross4.png";
+import aircrossFoto5 from "./assets/Aircross/fotoaircross5.png";
+
+// Equinox
+import equinoxFoto1 from "./assets/Equinox/fotoequinox1.png";
+import equinoxFoto2 from "./assets/Equinox/fotoequinox2.png";
+import equinoxFoto3 from "./assets/Equinox/fotoequinox3.png";
+import equinoxFoto4 from "./assets/Equinox/fotoequinox4.png";
+import equinoxFoto5 from "./assets/Equinox/fotoequinox5.png";
+
+// Palio Vermelho
+import palioVermelhoFoto1 from "./assets/PALIO VERMELHO/fotopalio1.png";
+import palioVermelhoFoto2 from "./assets/PALIO VERMELHO/fotopalio2.png";
+import palioVermelhoFoto3 from "./assets/PALIO VERMELHO/fotopalio3.png";
+import palioVermelhoFoto4 from "./assets/PALIO VERMELHO/fotopalio4.png";
+import palioVermelhoFoto5 from "./assets/PALIO VERMELHO/fotopalio5.png";
+
+// ==========================================
+// 2. LISTA DE CARROS (Estoque Oficial Binho Car)
+// ==========================================
 export const carrosEstoque = [
   {
     id: 1,
-    nome: "VW Polo MPI 1.0",
-    ano: "2022/2023",
-    km: "25.000 km",
-    combustivel: "Flex",
-    preco: "75.900",
+    nome: "JETTA 2.0 TSI Highline Auto",
+    ano: "2015",
+    km: "162.000 km",
+    combustivel: "Gasolina",
+    preco: "75.990",
     tag: "NOVIDADE",
-    img: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80",
-    ],
+    imagens: [jettaFoto1, jettaFoto2, jettaFoto3, jettaFoto4, jettaFoto5],
     descricao:
-      "Impecável. Único dono, revisões na agência e garantia de fábrica.",
+      "🔴 Jetta 2.0 TSI Highline Aut. 2015. Super conservado, completo com bancos em couro, multimídia, sensor de ré e pneus novos. Acompanha manual e chave cópia. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: videoJettaMp4, // Tem vídeo
   },
   {
     id: 2,
-    nome: "Fiat Argo Drive",
-    ano: "2021/2022",
-    km: "42.000 km",
+    nome: "JEEP RENEGADE 1.8 Automático",
+    ano: "2021",
+    km: "90.000 km",
     combustivel: "Flex",
-    preco: "62.500",
+    preco: "84.990",
     tag: "MAIS VENDIDO",
-    img: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Excelente custo-benefício para o dia a dia. Muito econômico.",
+    imagens: [jeepFoto1, jeepFoto2, jeepFoto3, jeepFoto4, jeepFoto5],
+    descricao:
+      "Jeep Renegade 1.8 Automático Flex 2021. Super conservado, completo e muito bem cuidado! Conta com câmbio automático, bancos em couro, multimídia com Bluetooth, volante multifuncional, piloto automático, Start/Stop, rodas de liga leve e farol de milha. Pneus e estepe novos, cautelar 100%, além de manual e chave cópia. Veículo revisado, com 90.000KM e pronto para uso. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null, // Sem vídeo
   },
   {
     id: 3,
-    nome: "Hyundai HB20 Comfort",
-    ano: "2023/2024",
-    km: "12.000 km",
-    combustivel: "Flex",
-    preco: "79.900",
-    tag: "ÚNICO DONO",
-    img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
+    nome: "Mercedes C-200",
+    ano: "2015",
+    km: "171.000 km",
+    combustivel: "Gasolina",
+    preco: "114.990",
+    tag: "PREMIUM",
+    imagens: [
+      mercedesFoto1,
+      mercedesFoto2,
+      mercedesFoto3,
+      mercedesFoto4,
+      mercedesFoto5,
     ],
-    descricao: "Estado de zero quilômetro. Cheira a novo!",
+    descricao:
+      "Mercedes C-200 2015. Super conservada, completa e muito bem cuidada! Conta com teto solar, painel digital TFT, bancos em couro, multimídia com CarPlay e direção elétrica. Equipada também com faróis automáticos, sensor de estacionamento e rodas de liga leve. Excelente acabamento e pronta para quem busca conforto e sofisticação.",
+    videoMp4: videoMercedesMp4, // Tem vídeo
   },
   {
     id: 4,
-    nome: "Toyota Corolla XEi",
-    ano: "2020/2021",
-    km: "58.000 km",
+    nome: "Toyota Corolla Gli 1.8 ",
+    ano: "2018",
+    km: "134.000 km",
     combustivel: "Flex",
-    preco: "124.900",
-    tag: "PREMIUM",
-    img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80",
+    preco: "86.990",
+    tag: "ÚNICO DONO",
+    imagens: [
+      corollaFoto1,
+      corollaFoto2,
+      corollaFoto3,
+      corollaFoto4,
+      corollaFoto5,
     ],
-    descricao: "O sedan mais desejado. Conforto e revenda garantida.",
+    descricao:
+      "Toyota Corolla GLi 1.8 Flex 2018. Único dono, super conservado e muito bem cuidado! Conta com câmbio automático, multimídia com Bluetooth, câmera de ré e excelente conforto para o dia a dia. Equipado também com pneus novos, além de manual e chave cópia. Veículo completo, reconhecido pela confiabilidade, economia e baixa manutenção, ideal para quem busca segurança, conforto e procedência. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null, // Deixando null temporariamente
   },
   {
     id: 5,
-    nome: "Jeep Renegade Longitude",
-    ano: "2019/2019",
-    km: "65.000 km",
+    nome: "Onix Activ 1.4 Automático",
+    ano: "2019",
+    km: "126.000 km",
     combustivel: "Flex",
-    preco: "89.900",
-    tag: "OFERTA",
-    img: "https://images.unsplash.com/photo-1539101105283-34630df41195?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1539101105283-34630df41195?auto=format&fit=crop&w=800&q=80",
+    preco: "69.990",
+    tag: "ECONÔMICO",
+    imagens: [
+      onixLaranjaFoto1,
+      onixLaranjaFoto2,
+      onixLaranjaFoto3,
+      onixLaranjaFoto4,
+      onixLaranjaFoto5,
     ],
-    descricao: "SUV robusto, completo com bancos em couro e multimídia.",
+    descricao:
+      " Onix Activ 1.4 Automático Flex 2019. Super conservado, completo e muito bem cuidado! Conta com câmbio automático, ar-condicionado, direção elétrica, piloto automático, vidros e travas elétricas, além de volante multifuncional e multimídia MyLink com Bluetooth. Equipado também com Airbag/ABS, limpador e desembaçador traseiro, pneus e estepe novos, além de manual e chave cópia. Veículo com 126.000KM, excelente para quem busca conforto, economia e praticidade no dia a dia. Fazemos simulação de financiamento, entrada facilitada em até 24x no cartão e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 6,
-    nome: "Chevrolet Onix LTZ",
-    ano: "2021/2022",
-    km: "33.000 km",
+    nome: "Chevrolet Onix Joy 1.0 ",
+    ano: "2017",
+    km: "143.000 km",
     combustivel: "Flex",
-    preco: "72.000",
+    preco: "45.999",
     tag: "ECONÔMICO",
-    img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+    imagens: [
+      onixBrancoFoto1,
+      onixBrancoFoto2,
+      onixBrancoFoto3,
+      onixBrancoFoto4,
+      onixBrancoFoto5,
     ],
-    descricao: "Motor turbo de alta performance e baixo consumo.",
+    descricao:
+      "Chevrolet Onix Joy 1.0 Flex 2017. Hatch econômico, confortável e muito bem cuidado, ideal para o dia a dia ou para a família! Conta com ar-condicionado, direção hidráulica, vidros e travas elétricas, som e desembaçador traseiro, oferecendo mais conforto e praticidade. Veículo completo, com 143.000KM e cautelar 100%, garantindo excelente procedência e segurança na compra. Ótima opção para quem busca economia, baixo custo de manutenção e confiabilidade. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 7,
-    nome: "Honda Civic G10",
-    ano: "2018/2018",
-    km: "72.000 km",
+    nome: "Volkswagen Saveiro Trendline 1.6 ",
+    ano: "2015",
+    km: "178.000 km",
     combustivel: "Flex",
-    preco: "115.000",
-    tag: "TOP DE LINHA",
-    img: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=800&q=80",
+    preco: "49.990",
+    tag: "TRABALHO/LAZER",
+    imagens: [
+      saveiroFoto1,
+      saveiroFoto2,
+      saveiroFoto3,
+      saveiroFoto4,
+      saveiroFoto5,
     ],
-    descricao: "Esportividade e elegância. Carro revisado e periciado.",
+    descricao:
+      "Volkswagen Saveiro Trendline 1.6 Flex 2015. Super conservada, cabine estendida e muito bem cuidada! Conta com volante multifuncional, Airbag, Bluetooth, retrovisores elétricos e excelente espaço para trabalho e lazer. Equipada também com capota marítima, engate e pneus novos, oferecendo ainda mais praticidade e versatilidade no dia a dia. Veículo completo, com chave cópia e ótimo custo-benefício para quem busca uma picape resistente, econômica e pronta para uso. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 8,
-    nome: "Renault Kwid Zen",
-    ano: "2021/2021",
-    km: "39.000 km",
+    nome: "Hyundai HB20S 1.6 Automático",
+    ano: "2018",
+    km: "63.000 km",
     combustivel: "Flex",
-    preco: "48.900",
-    tag: "PREÇO BAIXO",
-    img: "https://images.unsplash.com/photo-1662544252627-7204f1479867?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1662544252627-7204f1479867?auto=format&fit=crop&w=800&q=80",
+    preco: "67.990",
+    tag: "ÚNICO DONO",
+    imagens: [
+      hb20BrancoFoto1,
+      hb20BrancoFoto2,
+      hb20BrancoFoto3,
+      hb20BrancoFoto4,
+      hb20BrancoFoto5,
     ],
-    descricao: "O mais econômico da categoria. Ideal para trabalho ou cidade.",
+    descricao:
+      "Hyundai HB20S 1.6 Automático Flex 2018.Super conservado, completo e muito bem cuidado! Conta com câmbio automático, multimídia com Bluetooth, câmera de ré e rodas de liga leve, oferecendo conforto e praticidade para o dia a dia. Equipado também com Airbag/ABS, pneus novos, além de manual e chave cópia. Veículo com apenas 63.000KM, excelente opção para quem busca economia, conforto e procedência. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 9,
-    nome: "VW Nivus Highline",
-    ano: "2022/2022",
-    km: "19.000 km",
+    nome: "Citroën Aircross 1.6",
+    ano: "2015",
+    km: "94.000 km",
     combustivel: "Flex",
-    preco: "128.000",
-    tag: "SEMI-NOVO",
-    img: "https://images.unsplash.com/photo-1617460593293-e23ba3695d05?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1617460593293-e23ba3695d05?auto=format&fit=crop&w=800&q=80",
+    preco: "44.990",
+    tag: "ESPAÇOSO",
+    imagens: [
+      aircrossFoto1,
+      aircrossFoto2,
+      aircrossFoto3,
+      aircrossFoto4,
+      aircrossFoto5,
     ],
-    descricao: "Tecnologia de ponta. Painel digital e ACC (piloto adaptativo).",
+    descricao:
+      "Citroën Aircross 1.6 Flex 2015. Super conservado, completo e muito bem cuidado! Conta com Airbag/ABS, som com Bluetooth e excelente espaço interno, oferecendo conforto e praticidade para o dia a dia. Equipado também com pneus e estepe novos, além de manual e chave cópia. Veículo ideal para quem busca um carro versátil, confortável e com ótimo custo-benefício. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 10,
-    nome: "Ford Ranger XLT",
-    ano: "2017/2018",
-    km: "98.000 km",
-    combustivel: "Diesel",
-    preco: "145.000",
-    tag: "4X4 DIESEL",
-    img: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+    nome: "Chevrolet Equinox 1.5",
+    ano: "2022",
+    km: "55.000 km",
+    combustivel: "Gasolina",
+    preco: "129.990",
+    tag: "LUXO/SUV",
+    imagens: [
+      equinoxFoto1,
+      equinoxFoto2,
+      equinoxFoto3,
+      equinoxFoto4,
+      equinoxFoto5,
     ],
-    descricao: "Força e resistência. Tração 4x4 e câmbio automático.",
+    descricao:
+      "Chevrolet Equinox RS 1.5 Turbo Automática 2022. SUV extremamente conservado, completo e com visual esportivo da versão RS! Conta com motor 1.5 Turbo econômico e potente, câmbio automático, bancos em couro, multimídia MyLink com Apple CarPlay e Android Auto, além de ar-condicionado digital e chave presencial com partida por botão. Equipada também com câmera de ré, sensores de estacionamento, controle de estabilidade e tração, piloto automático, rodas de liga leve, faróis em LED, computador de bordo, vidros e retrovisores elétricos. Veículo com apenas 55.000KM, manual e chave cópia, perfeito para quem busca conforto, tecnologia e excelente espaço interno. Oportunidade abaixo da FIPE! Fazemos simulação de financiamento, parcelamos a entrada em até 24x no cartão e aceitamos troca!",
+    videoMp4: null,
   },
   {
     id: 11,
-    nome: "Chevrolet Tracker Premier",
-    ano: "2021/2021",
-    km: "45.000 km",
+    nome: "Fiat Palio Attractive 1.0 ",
+    ano: "2016",
+    km: "106.000 km",
     combustivel: "Flex",
-    preco: "112.900",
-    tag: "COMPLETO",
-    img: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
+    preco: "40.990",
+    tag: "OPORTUNIDADE",
+    imagens: [
+      palioVermelhoFoto1,
+      palioVermelhoFoto2,
+      palioVermelhoFoto3,
+      palioVermelhoFoto4,
+      palioVermelhoFoto5,
     ],
     descricao:
-      "Versão topo de linha com teto solar e estacionamento automático.",
-  },
-  {
-    id: 12,
-    nome: "VW Gol 1.6",
-    ano: "2020/2021",
-    km: "55.000 km",
-    combustivel: "Flex",
-    preco: "54.000",
-    tag: "REVENDA FÁCIL",
-    img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Motor 1.6 forte e confiável. Ótimo estado de conservação.",
-  },
-  {
-    id: 13,
-    nome: "Hyundai Creta Prestige",
-    ano: "2019/2020",
-    km: "60.000 km",
-    combustivel: "Flex",
-    preco: "98.000",
-    tag: "SUV FAMÍLIA",
-    img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Muito espaço interno e porta-malas generoso. Revisado.",
-  },
-  {
-    id: 14,
-    nome: "Nissan Kicks SL",
-    ano: "2020/2021",
-    km: "48.000 km",
-    combustivel: "Flex",
-    preco: "94.500",
-    tag: "CÂMERA 360",
-    img: "https://images.unsplash.com/photo-1563720223185-11003d516905?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1563720223185-11003d516905?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Extremamente confortável. Painel moderno e som premium.",
-  },
-  {
-    id: 15,
-    nome: "Toyota Yaris Hatch",
-    ano: "2022/2023",
-    km: "22.000 km",
-    combustivel: "Flex",
-    preco: "88.000",
-    tag: "JAPONÊS",
-    img: "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Segurança e economia Toyota. Garantia vigente.",
-  },
-  {
-    id: 16,
-    nome: "Fiat Toro Freedom",
-    ano: "2018/2019",
-    km: "85.000 km",
-    combustivel: "Flex",
-    preco: "92.000",
-    tag: "PICKUP",
-    img: "https://images.unsplash.com/photo-1586326115032-489993e50774?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1586326115032-489993e50774?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "Praticidade de SUV com caçamba. Excelente para lazer.",
-  },
-  {
-    id: 17,
-    nome: "BMW 320i M Sport",
-    ano: "2021/2022",
-    km: "30.000 km",
-    combustivel: "Gasolina",
-    preco: "258.000",
-    tag: "ESPORTIVO LUXO",
-    img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
-    fotosExtras: [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
-    ],
-    descricao: "O auge do prazer em dirigir. Bancos concha e teto solar.",
+      "Fiat Palio Attractive 1.0 Flex 2016. Hatch econômico, confortável e muito bem cuidado, ideal para o dia a dia ou para a família! Conta com ar-condicionado, direção hidráulica, vidros elétricos, travas elétricas, alarme, som USB e desembaçador traseiro. Equipado também com pneus novos, oferecendo mais segurança e praticidade. Veículo com 106.000KM, completo e pronto para uso, unindo economia, conforto e excelente custo-benefício. Fazemos simulação de financiamento e aceitamos troca!",
+    videoMp4: null,
   },
 ];
