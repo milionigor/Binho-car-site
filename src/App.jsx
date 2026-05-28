@@ -1,73 +1,50 @@
 import { useState } from "react";
-
 import { Link, useNavigate, useLocation } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
 import Navbar from "./components/Navbar";
-
 import Footer from "./components/Footer";
-
 import Depoimentos from "./components/Depoimentos";
-
 import Mapa from "./components/Mapa";
 
-// ✅ IMPORTANDO A SUA FOTO NOVA DO BANNER (Caminho corrigido para a sua pasta!)
-
+// Importando a foto nova do banner
 import Bannerprincipal from "./assets/Banner principal/bannerprincipal.png";
 
-// Importando os estilos do Swipeg
-
+// Importando os estilos do Swiper
 import "swiper/css";
-
 import "swiper/css/navigation";
-
 import "swiper/css/pagination";
 
 import {
   FaWhatsapp,
   FaSearch,
-  FaCalendarAlt,
   FaGasPump,
   FaRoute,
   FaCalendarDay,
 } from "react-icons/fa";
-
 import { carrosEstoque } from "./dados";
 
 function App() {
   const [busca, setBusca] = useState("");
-
   const navigate = useNavigate();
-
   const location = useLocation();
 
   const handleVerEstoque = (e) => {
     e.preventDefault();
-
     const idSeção = "estoque";
-
     if (location.pathname !== "/") {
       navigate("/");
-
       setTimeout(() => {
         const elemento = document.getElementById(idSeção);
-
         if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
       const elemento = document.getElementById(idSeção);
-
       if (elemento) elemento.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Separação de Destaques e Estoque Geral
-
   const destaques = carrosEstoque.slice(0, 3);
-
   const estoqueFiltrado = carrosEstoque.filter(
     (carro) =>
       carro.nome.toLowerCase().includes(busca.toLowerCase()) ||
@@ -81,11 +58,8 @@ function App() {
     >
       <Navbar />
 
-      {/* 🏎️ SEÇÃO 1: BANNER PRINCIPAL */}
-
+      {/* BANNER PRINCIPAL */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 px-6 bg-dark overflow-hidden">
-        {/* ✅ AQUI ESTÁ A MÁGICA: Puxando a sua foto nova com opacidade para dar leitura no texto */}
-
         <div
           className="absolute inset-0 opacity-30 bg-cover bg-center w-full h-full object-cover"
           style={{ backgroundImage: `url(${Bannerprincipal})` }}
@@ -96,11 +70,9 @@ function App() {
             Seu carro novo está aqui <br />
             <span className="text-vermelho-italia">Binho Car Veículos</span>
           </h1>
-
           <p className="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl font-light italic">
             As melhores ofertas de Vinhedo e região com procedência garantida.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="#estoque"
@@ -113,8 +85,7 @@ function App() {
         </div>
       </section>
 
-      {/* 🔥 CARROS EM DESTAQUE (CARROSSEL) */}
-
+      {/* 🔥 CARROS EM DESTAQUE (CARROSSEL) - SUA ATUALIZAÇÃO */}
       <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-10">
@@ -122,7 +93,6 @@ function App() {
               <h2 className="text-2xl md:text-4xl font-black text-dark uppercase italic">
                 Destaques da Semana
               </h2>
-
               <div className="w-20 h-1.5 bg-verde-italia mt-2"></div>
             </div>
           </div>
@@ -139,12 +109,14 @@ function App() {
           >
             {destaques.map((carro) => (
               <SwiperSlide key={carro.id}>
+                {/* AQUI ESTÁ O AJUSTE: Mudamos flex-col para garantir responsividade */}
                 <div className="bg-dark text-white flex flex-col md:flex-row min-h-[450px]">
-                  <div className="md:w-3/5 h-[300px] md:h-auto overflow-hidden bg-white flex items-center justify-center p-0 rounded-t-[40px] md:rounded-l-[40px] md:rounded-t-none">
+                  {/* CONTAINER DA IMAGEM: Ajustado para usar 'contain' e mostrar o carro todo */}
+                  <div className="md:w-3/5 h-[250px] md:h-[450px] bg-white flex items-center justify-center rounded-t-[40px] md:rounded-l-[40px] md:rounded-t-none p-2">
                     <img
                       src={carro.imagens[0]}
                       alt={carro.nome}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
 
@@ -152,28 +124,25 @@ function App() {
                     <span className="text-verde-italia font-black uppercase tracking-widest text-xs mb-2">
                       {carro.tag}
                     </span>
-
-                    <h3 className="text-3xl md:text-4xl font-black uppercase italic mb-2 tracking-tighter">
+                    <h3 className="text-2xl md:text-4xl font-black uppercase italic mb-2 tracking-tighter">
                       {carro.nome}
                     </h3>
-
-                    <p className="text-3xl text-vermelho-italia font-black mb-6">
+                    <p className="text-2xl md:text-3xl text-vermelho-italia font-black mb-6">
                       R$ {carro.preco}
                     </p>
 
                     <div className="flex flex-col gap-3">
                       <Link
                         to={`/carro/${carro.id}`}
-                        className="w-full bg-white text-dark font-black py-4 rounded-xl text-center uppercase text-sm tracking-tighter hover:bg-gray-200 transition-all"
+                        className="w-full bg-white text-dark font-black py-3 rounded-xl text-center uppercase text-xs tracking-tighter hover:bg-gray-200 transition-all"
                       >
                         Fotos e Detalhes
                       </Link>
-
                       <a
-                        href={`https://wa.me/5519992644705?text=Olá Binho Car! Vi nos destaques do site e quero saber mais sobre o carro: %0A- Veículo: ${carro.nome} %0A- Ano: ${carro.ano} %0A- KM: ${carro.km} %0A- Valor: R$ ${carro.preco}`}
+                        href={`https://wa.me/5519992644705?text=Olá Binho Car! Estava vendo os carros em destaque no seu site e gostei deste veículo: %0A- Veículo: ${carro.nome} %0A- Ano: ${carro.ano} %0A- KM: ${carro.km} %0A- Valor: R$ ${carro.preco}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-full bg-verde-italia text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 uppercase text-sm tracking-tighter hover:bg-green-600 transition-all"
+                        className="w-full bg-verde-italia text-white font-black py-3 rounded-xl flex items-center justify-center gap-2 uppercase text-sm tracking-tighter hover:bg-green-600 transition-all"
                       >
                         <FaWhatsapp size={20} /> Tenho Interesse
                       </a>
@@ -187,18 +156,15 @@ function App() {
       </section>
 
       {/* 🚗 RESTANTE DO ESTOQUE (GRADE) */}
-
       <section id="estoque" className="py-20 max-w-7xl mx-auto px-6 w-full">
         <div className="flex flex-col items-center mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-dark mb-4 uppercase italic">
             Nosso Estoque
           </h2>
-
           <div className="w-24 h-2 bg-gradient-to-r from-verde-italia to-vermelho-italia rounded-full mb-10"></div>
 
           <div className="relative w-full max-w-2xl group">
             <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-vermelho-italia transition-colors" />
-
             <input
               type="text"
               placeholder="Digite a marca ou modelo..."
@@ -221,12 +187,10 @@ function App() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   alt={carro.nome}
                 />
-
                 <div className="absolute top-5 left-5 bg-verde-italia text-white px-4 py-1 rounded-full text-[10px] font-black shadow-lg uppercase z-10">
                   {carro.tag}
                 </div>
               </div>
-
               <div className="p-8 flex-grow flex flex-col">
                 <h3 className="text-2xl font-black text-dark mb-4 uppercase italic tracking-tighter">
                   {carro.nome}
@@ -237,11 +201,9 @@ function App() {
                     <FaCalendarDay className="text-vermelho-italia" />{" "}
                     {carro.ano}
                   </div>
-
                   <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-2xl">
                     <FaRoute className="text-vermelho-italia" /> {carro.km}
                   </div>
-
                   <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-2xl col-span-2">
                     <FaGasPump className="text-vermelho-italia" />{" "}
                     {carro.combustivel}
@@ -259,8 +221,8 @@ function App() {
                   >
                     Fotos e Detalhes
                   </Link>
-
                   <a
+                    href={`https://wa.me/5519992644705?text=Olá Binho Car! Gostei deste veículo: %0A- Veículo: ${carro.nome} %0A- Ano: ${carro.ano} %0A- KM: ${carro.km} %0A- Valor: R$ ${carro.preco}`}
                     target="_blank"
                     rel="noreferrer"
                     className="w-full bg-dark text-white font-black py-4 rounded-xl hover:bg-verde-italia transition-all flex items-center justify-center gap-2 text-center uppercase text-sm"
@@ -284,12 +246,9 @@ function App() {
       >
         <div className="absolute top-0 left-0 w-full h-1 flex">
           <div className="flex-1 bg-verde-italia"></div>
-
           <div className="flex-1 bg-white"></div>
-
           <div className="flex-1 bg-vermelho-italia"></div>
         </div>
-
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase italic">
@@ -302,7 +261,6 @@ function App() {
               transparência total.
             </p>
           </div>
-
           <div className="md:w-1/2 relative">
             <div className="rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl aspect-video bg-black relative">
               <video
@@ -321,7 +279,6 @@ function App() {
       </section>
 
       <Mapa />
-
       <Footer />
 
       <a
