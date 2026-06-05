@@ -55,13 +55,13 @@ const clientes = [
   },
   {
     id: 7,
-    nome: "Sem Nome",
+    nome: "Ricardo",
     cidade: "Vinhedo",
     foto: cliente7,
   },
   {
     id: 8,
-    nome: "Sem Nome",
+    nome: "Cristina",
     cidade: "Vinhedo",
     foto: cliente8,
   },
