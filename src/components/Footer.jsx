@@ -76,9 +76,24 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Binho Car. Todos os direitos
-        reservados.
+      {/* ✅ NOVA PARTE: RODAPÉ INFERIOR COM A ASSINATURA DA NEXUSWAY */}
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-4 text-center md:text-left">
+        <p>
+          &copy; {new Date().getFullYear()} Binho Car. Todos os direitos
+          reservados.
+        </p>
+
+        <p>
+          Desenvolvido por{" "}
+          <a
+            href="https://wa.me/5519989609605?text=vim%20pelo%20site%20do%20binho%20car%20gostaria%20de%20fazer%20um%20orçamento%20para%20desenvolver%20um%20site"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[#e74c3c] font-bold tracking-widest hover:text-white transition-colors uppercase"
+          >
+            Nexusway
+          </a>
+        </p>
       </div>
     </footer>
   );
