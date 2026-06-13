@@ -56,20 +56,6 @@ import palioVermelhoFoto5 from "./assets/PALIO VERMELHO/fotopalio5.png";
 // 2. IMPORTS DOS NOVOS VEÍCULOS
 // ==========================================
 
-// Corsa Bege
-import corsaFoto1 from "./assets/CORSA BEGE/fotocorsabege1.png";
-import corsaFoto2 from "./assets/CORSA BEGE/fotocorsabege2.png";
-import corsaFoto3 from "./assets/CORSA BEGE/fotocorsabege3.png";
-import corsaFoto4 from "./assets/CORSA BEGE/fotocorsabege4.png";
-import corsaFoto5 from "./assets/CORSA BEGE/fotocorsabege5.png";
-
-// CRV
-import crvFoto1 from "./assets/CRV/fotocrv1.png";
-import crvFoto2 from "./assets/CRV/fotocrv2.png";
-import crvFoto3 from "./assets/CRV/fotocrv3.png";
-import crvFoto4 from "./assets/CRV/fotocrv4.png";
-import crvFoto5 from "./assets/CRV/fotocrv5.png";
-
 // Honda CG 160 Start 2022 (Prata)
 import cg2022Foto1 from "./assets/HONDA CG prata/fotohondacg2022s1.png";
 import cg2022Foto2 from "./assets/HONDA CG prata/fotohondacg2022s2.png";
@@ -191,19 +177,6 @@ export const carrosEstoque = [
     videoMp4: null,
   },
   {
-    id: 5,
-    nome: "Honda CR-V 2.0 LX 4X2 16V",
-    ano: "2011",
-    km: "190.000 km",
-    combustivel: "Gasolina",
-    preco: "58.990",
-    tag: "ESPAÇOSO/SUV",
-    imagens: [crvFoto1, crvFoto2, crvFoto3, crvFoto4, crvFoto5],
-    descricao:
-      "Honda CR-V LX 2.0 Automática 2011. SUV espaçosa, confortável e reconhecida pela sua confiabilidade e excelente mecânica. Ideal para famílias ou para quem busca segurança, robustez e conforto em todas as viagens. Conta com câmbio automático, ar-condicionado, direção hidráulica, vidros, travas e retrovisores elétricos, multimídia com Bluetooth, bancos em couro, rodas de liga leve, além de airbag e freios ABS. Veículo com 190.000 km, cautelar 100% aprovada, pneus e estepe em ótimo estado de conservação, manual do proprietário e chave cópia. Muito bem cuidada, pronta para uso e com excelente custo-benefício. Fazemos simulação de financiamento e aceitamos troca mediante avaliação.",
-    videoMp4: null,
-  },
-  {
     id: 6,
     nome: "Fiat MOBI 1.0 8V EVO Like",
     ano: "2019",
@@ -214,19 +187,6 @@ export const carrosEstoque = [
     imagens: [mobiFoto1, mobiFoto2, mobiFoto3, mobiFoto4, mobiFoto5],
     descricao:
       "Fiat Mobi 1.0 Flex 2019. Um dos modelos mais econômicos e procurados da categoria, ideal para quem deseja um veículo moderno, confortável e com baixo custo de manutenção. Super conservado e pronto para uso, conta com ar-condicionado, direção hidráulica, vidros e travas elétricas, multimídia com Bluetooth, câmera de ré, sensor de estacionamento, rodas de liga leve e engate. Equipado com pneus novos, além de manual do proprietário e chave cópia. Compacto por fora, prático para estacionar e econômico para rodar, é uma excelente opção para o uso diário. Aceitamos troca, fazemos simulação de financiamento e parcelamos a entrada no cartão de crédito em até 21 vezes, sujeito à aprovação.",
-    videoMp4: null,
-  },
-  {
-    id: 7,
-    nome: "Chevrolet Corsa 1.0 MPFI Classic",
-    ano: "2012",
-    km: "176.000 km",
-    combustivel: "Flex",
-    preco: "27.990",
-    tag: "ECONÔMICO",
-    imagens: [corsaFoto1, corsaFoto2, corsaFoto3, corsaFoto4, corsaFoto5],
-    descricao:
-      "Chevrolet Corsa Classic 1.0 Flex 2012. Excelente opção para quem procura economia, confiabilidade e conforto. Veículo muito bem conservado, com 176.000 km, direção hidráulica, farol de milha, desembaçador traseiro, pneus em ótimo estado, além de manual do proprietário e chave reserva. Carro espaçoso, ideal para o uso diário, viagens ou para a família. Pronto para uso, com ótimo custo-benefício e manutenção acessível. Fazemos simulação de financiamento sem compromisso e aceitamos troca mediante avaliação.",
     videoMp4: null,
   },
   {
@@ -248,7 +208,7 @@ export const carrosEstoque = [
     ano: "2022",
     km: "20.000 km",
     combustivel: "Flex",
-    preco: "12.990",
+    preco: "13.990",
     tag: "MOTO",
     imagens: [cg2022Foto1, cg2022Foto2, cg2022Foto3, cg2022Foto4, cg2022Foto5],
     descricao:
