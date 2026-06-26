@@ -53,7 +53,18 @@ import bmwFoto4 from "./assets/BMW GS/fotobmwgs4.png";
 import bmwFoto5 from "./assets/BMW GS/fotobmwgs5.png";
 
 // ==========================================
-// 2. LISTA DE CARROS (Estoque Oficial Binho Car)
+// 2. IMPORTS DOS NOVOS VEÍCULOS
+// ==========================================
+
+// Honda HR-V EX (NOVO CARRO)
+import hrvFoto1 from "./assets/Honda HRV EX/hondahv1.png";
+import hrvFoto2 from "./assets/Honda HRV EX/hondahv2.png";
+import hrvFoto3 from "./assets/Honda HRV EX/hondahv3.png";
+import hrvFoto4 from "./assets/Honda HRV EX/hondahv4.png";
+import hrvFoto5 from "./assets/Honda HRV EX/hondahv5.png";
+
+// ==========================================
+// 3. LISTA DE CARROS (Estoque Oficial Binho Car)
 // ==========================================
 export const carrosEstoque = [
   // --- INÍCIO DOS DESTAQUES (OS 3 PRIMEIROS DO CARROSSEL) ---
@@ -179,6 +190,21 @@ export const carrosEstoque = [
     imagens: [bmwFoto1, bmwFoto2, bmwFoto3, bmwFoto4, bmwFoto5],
     descricao:
       "BMW G 310 GS Série Especial 40 Anos 2021. Uma moto premium que combina estilo, desempenho e versatilidade em um único modelo. Esta versão comemorativa 40 Anos possui visual exclusivo, valorizando ainda mais uma das motos mais desejadas da categoria. Único dono, com apenas 41.000 km e em excelente estado de conservação. Equipada com freios ABS, pneus novos e baú GIVI, proporcionando mais segurança e praticidade para o dia a dia ou para viagens. Acompanha manual do proprietário e chave cópia. Robusta, confortável e pronta para qualquer aventura, é a escolha ideal para quem busca qualidade, confiabilidade e o padrão BMW. Aceitamos troca, fazemos simulação de financiamento sem compromisso e facilitamos a entrada em até 24x no cartão, sujeito à aprovação",
+    videoMp4: null,
+  },
+
+  // --- CARRO NOVO ADICIONADO ---
+  {
+    id: 17,
+    nome: "Honda HR-V EX 1.8 Automático",
+    ano: "2016",
+    km: "125.000 km",
+    combustivel: "Flex",
+    preco: "84.990",
+    tag: "NOVIDADE/SUV",
+    imagens: [hrvFoto1, hrvFoto2, hrvFoto3, hrvFoto4, hrvFoto5],
+    descricao:
+      "Honda HR-V EX 1.8 Automático 2016 Flex. Loja física em Vinhedo. Veículo extremamente conservado e pronto para uso! SUV automático muito procurado na região. Conta com multimídia com Bluetooth, volante multifuncional, piloto automático, rodas de liga leve e farol de milha. Equipado com pneus e estepe novos, Airbag, freios ABS e cautelar 100% aprovada. Acompanha manual do proprietário e chave reserva. Excelente oportunidade. Aceitamos troca, fazemos simulação de financiamento e facilitamos a entrada em até 24x no cartão (parcelamento sujeito à aprovação de crédito).",
     videoMp4: null,
   },
 ];
