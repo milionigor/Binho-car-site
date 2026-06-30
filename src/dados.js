@@ -56,12 +56,19 @@ import bmwFoto5 from "./assets/BMW GS/fotobmwgs5.png";
 // 2. IMPORTS DOS NOVOS VEÍCULOS
 // ==========================================
 
-// Honda HR-V EX (NOVO CARRO)
+// Honda HR-V EX
 import hrvFoto1 from "./assets/Honda HRV EX/hondahv1.png";
 import hrvFoto2 from "./assets/Honda HRV EX/hondahv2.png";
 import hrvFoto3 from "./assets/Honda HRV EX/hondahv3.png";
 import hrvFoto4 from "./assets/Honda HRV EX/hondahv4.png";
 import hrvFoto5 from "./assets/Honda HRV EX/hondahv5.png";
+
+// Hyundai HB20 Unique (NOVO CARRO ADICIONADO)
+import hb20NovoFoto1 from "./assets/Hyundai HB20 Unique/fotohb20novo1.png";
+import hb20NovoFoto2 from "./assets/Hyundai HB20 Unique/fotohb20novo2.png";
+import hb20NovoFoto3 from "./assets/Hyundai HB20 Unique/fotohb20novo3.png";
+import hb20NovoFoto4 from "./assets/Hyundai HB20 Unique/fotohb20novo4.png";
+import hb20NovoFoto5 from "./assets/Hyundai HB20 Unique/fotohb20novo5.png";
 
 // ==========================================
 // 3. LISTA DE CARROS (Estoque Oficial Binho Car)
@@ -192,8 +199,6 @@ export const carrosEstoque = [
       "BMW G 310 GS Série Especial 40 Anos 2021. Uma moto premium que combina estilo, desempenho e versatilidade em um único modelo. Esta versão comemorativa 40 Anos possui visual exclusivo, valorizando ainda mais uma das motos mais desejadas da categoria. Único dono, com apenas 41.000 km e em excelente estado de conservação. Equipada com freios ABS, pneus novos e baú GIVI, proporcionando mais segurança e praticidade para o dia a dia ou para viagens. Acompanha manual do proprietário e chave cópia. Robusta, confortável e pronta para qualquer aventura, é a escolha ideal para quem busca qualidade, confiabilidade e o padrão BMW. Aceitamos troca, fazemos simulação de financiamento sem compromisso e facilitamos a entrada em até 24x no cartão, sujeito à aprovação",
     videoMp4: null,
   },
-
-  // --- CARRO NOVO ADICIONADO ---
   {
     id: 17,
     nome: "Honda HR-V EX 1.8 Automático",
@@ -205,6 +210,27 @@ export const carrosEstoque = [
     imagens: [hrvFoto1, hrvFoto2, hrvFoto3, hrvFoto4, hrvFoto5],
     descricao:
       "Honda HR-V EX 1.8 Automático 2016 Flex. Loja física em Vinhedo. Veículo extremamente conservado e pronto para uso! SUV automático muito procurado na região. Conta com multimídia com Bluetooth, volante multifuncional, piloto automático, rodas de liga leve e farol de milha. Equipado com pneus e estepe novos, Airbag, freios ABS e cautelar 100% aprovada. Acompanha manual do proprietário e chave reserva. Excelente oportunidade. Aceitamos troca, fazemos simulação de financiamento e facilitamos a entrada em até 24x no cartão (parcelamento sujeito à aprovação de crédito).",
+    videoMp4: null,
+  },
+
+  // --- NOVO CARRO ADICIONADO: HB20 ---
+  {
+    id: 18,
+    nome: "Hyundai HB20 Unique 1.0",
+    ano: "2019",
+    km: "132.000 km",
+    combustivel: "Flex",
+    preco: "54.990",
+    tag: "ECONÔMICO",
+    imagens: [
+      hb20NovoFoto1,
+      hb20NovoFoto2,
+      hb20NovoFoto3,
+      hb20NovoFoto4,
+      hb20NovoFoto5,
+    ],
+    descricao:
+      "Hyundai HB20 Unique 1.0 Flex 2019. Veículo completo e extremamente conservado, pronto para uso! Conta com multimídia com Bluetooth, câmera de ré, direção elétrica, ar-condicionado e volante multifuncional. Equipado com pneus e estepe novos, além de possuir Airbag e cautelar 100% aprovada. Acompanha manual e chave reserva. Uma excelente oportunidade para quem busca conforto e economia no dia a dia. Aceitamos troca, fazemos simulação de financiamento e entrada facilitada em até 24x no cartão (parcelamento sujeito à aprovação de crédito).",
     videoMp4: null,
   },
 ];
